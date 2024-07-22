@@ -102,6 +102,7 @@ std::vector<std::vector<char>> TESTGRID = {
 */
 
 // FORK IN 1 (3)
+/*
 std::vector<std::vector<char>> TESTGRID = {
         {'#', '#', '#', '#', '#', '#', '#', 'r'},
         {'#', '#', '#', '#', '#', '#', '#', '#'},
@@ -112,6 +113,7 @@ std::vector<std::vector<char>> TESTGRID = {
         {'#', '#', '#', '#', '#', '#', '#', '#'},
         {'#', '#', '#', '#', '#', '#', '#', '#'},
 };
+*/
 
 //CHECKMATE IN 2 MOVES (3)
 /*
@@ -217,7 +219,6 @@ int main()
     ptrHuman->initMobility();
     ptrAI->initMobility();
 
-
     int loosing = 0;
     cout << "INITIAL CHESSBOARD" << endl;
     ptrBoard->printBoard();
@@ -226,8 +227,9 @@ int main()
     AI = *ptrAI;
     Human = *ptrHuman;
 
-
     while (loosing == 0) {
+        ptrBoard->evBoard();
+        cout << "EVAL = " << ptrBoard->BoardScore << endl;
         Board = *ptrBoard;
         int x, y;
         int resGamestate;
@@ -306,6 +308,5 @@ int main()
     }
     cout << "FINALE CHESSBOARD" << endl;
     ptrBoard->printBoard();
-
     return 0;
 }
