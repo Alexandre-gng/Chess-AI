@@ -7,10 +7,13 @@
 using namespace std;
 
 
-// ============= TEMP PRE DECLARATION ================
+// ============= SPECEFIC DECLARATION ================
+// MinMax algoritm with alpha beta enhancement
 int MinMax(ChessBoard, int, bool, int, int, Player);
+// Function launching the MinMax algorithm
 ChessBoard playMoveMinMax(ChessBoard Board, int depth, const Player& player);
-void initMovesOnePlayer(ChessBoard* Board, Player *player);
+// Take txt file with PGN inside and create a chessboard
+ChessBoard PGNtoBoard(string pathfile);
 
 class ChessBoard
 {

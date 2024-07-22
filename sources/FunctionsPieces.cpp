@@ -3,6 +3,39 @@
 #include "ClassBoard.h"
 #include "ClassPieces.h"
 
+/*
+ * - Si pièce enemie obstrue le roque
+ * - Si Tour a bougé
+ * - Si Roi a bougé
+ *
+ * - Inscription dans le VECTORPossibleMoves (uniquement du Roi):
+ *       - [-1;0] pour BigCastle
+ *       - [0;-1] pour LitleCastle
+ *
+ * A MODIFIER:
+ *      - InitMoveOnePlayer (InitPossibleMoves ?)
+ *      - getCopyBoard (transfèrer les variables canBigCastle et canLitleCastle)
+ *      - Vérifier que le GameState se fasse bien après la mise en place du move (pour que les échecs restent détectés)
+ *      - doMove() => Ajouter le Roque si coordonnées sont [0;-1] ou [-1;0]
+ *      - doMove() => Si le mouvement concerne une tour ou le roi => FINITO PIPO
+ *
+ *
+ *
+ */
+// Checks if a player can castle
+bool ChessBoard::canPlayerCastle(Player player) {
+    if(isKingChecked(player.ptrKing) || (!player.canBigCastle && !player.canLitleCastle)) {
+        return false;
+    }
+
+    if (player.color == Piece::Color::Black) {
+
+    }
+    else {
+
+    }
+
+}
 
 // Add all of the possible moves to a bishop's VECTORPossibleMoves
 void Piece::BishopPossibleMoves(ChessBoard C) {

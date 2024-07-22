@@ -1,9 +1,4 @@
 /* TO DO:
- *  - Cycle de jeu
- *  - Fonction d'évaluation (traditional hand-crafted evaluation):
- *      - (-20000) si roi en échec et mat OK
- *      - mobility
- *      - Tapered Eval
  *
  *  - Roque
  *  - En passant mdrrr
@@ -29,15 +24,22 @@
  *      - Fou OK
  *      - Pion OK
  *
+ *  - Fonction d'évaluation (traditional hand-crafted evaluation): OK
+ *      - (-20000) si roi en échec et mat OK
+ *      - mobility OK
+ *      - Tapered Eval OK
+ *
  *  - MinMax (idéalement adapté à la classe de Node issue de MCTS)
  *
  *  - Ajouter les restrictions des moves possibles quand roi en échec
  *      (initMovesOnePlayer) OK
  *
+ *  - Cycle de jeu OK
+ *
  *  ============= BUGS ============
  *  El famoso avec mat rook + bishop:
- *      - Problème d'initialisation des moves de la rook
- *      - Mauvaise détection du mat
+ *      - Problème d'initialisation des moves de la rook OK?
+ *      - Mauvaise détection du mat OK
  */
 
 #include <iostream>
@@ -308,5 +310,6 @@ int main()
     }
     cout << "FINALE CHESSBOARD" << endl;
     ptrBoard->printBoard();
+
     return 0;
 }

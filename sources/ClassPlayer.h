@@ -43,5 +43,9 @@ public:
     }
 };
 
+// Initialise all the possible moves of a Player's pieces
+void initMovesOnePlayer(ChessBoard* Board, Player *player);
+
+
 
 #endif //CHESSBOARD_CLASSPLAYER_H
