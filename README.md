@@ -2,11 +2,7 @@
 # Description
 This project is a chess AI using Alpha-Beta pruning and the PeSTO's evaluation function with a tapered evaluation.
 
-
-
-https://github.com/user-attachments/assets/72d64c0e-9c77-4d71-9926-6f2a81f8d7df
-
-
+![video_chessAI](https://github.com/user-attachments/assets/d00abf75-dc84-4aba-a883-8564e75a0171)
 
 ## Sources
 [Chess Programming Wiki](https://www.chessprogramming.org/Main_Page)
